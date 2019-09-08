@@ -2,8 +2,8 @@ import { router } from "./index";
 
 import user from "../controllers/baseball.controller";
 
-router.get('/scoreboard', user.scoreboard_get);
+router.get('/schedule', user.schedule_get);
 
-router.get('/boxscore', user.boxscore_get);
+router.get('/linescore', user.lineScore_get);
 
 export default router;
