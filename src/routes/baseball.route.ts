@@ -1,6 +1,6 @@
 import { router } from "./index";
 
-import user from "../controllers/baseball";
+import user from "../controllers/baseball.controller";
 
 router.get('/scoreboard', user.scoreboard_get);
 

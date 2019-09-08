@@ -5,7 +5,7 @@ import express from "express";
 import logger from "morgan";
 import createError from "http-errors";
 import { Express, Request, Response, NextFunction } from 'express-serve-static-core';
-import  baseballRouter from "./routes/baseball";
+import  baseballRouter from "./routes/baseball.route";
 
 //app
 const app: Express = express();
