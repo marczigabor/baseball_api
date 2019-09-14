@@ -27,7 +27,6 @@ const baseball_controller = {
 
                     //console.log(result);
                     res.send(LineScoreMapper.mapLineScore(JSON.parse(body)));
-                    res.send(body);
                   
                 }else {
                     let errorObject = new Error(error || response.statusMessage);
@@ -64,14 +63,6 @@ const baseball_controller = {
             }            
         });
     }
-}
-
-const getDateFromGameId = (gameId: string ): Date => {
-    const year:number = Number(gameId.substr(0,4));
-    const month: number = Number(gameId.substr(5,2));
-    const day: number = Number(gameId.substr(8,2));
-
-    return new Date(year, month, day);
 }
 
 const getDateUrlPart = (year: number, month: number, day: number): string=> {
