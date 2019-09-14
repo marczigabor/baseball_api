@@ -44,6 +44,5 @@ app.use(function(err: any, req: Request, res: Response, next: NextFunction) {
     res.status(err.status || 500);
   
     res.send(err.message);
-    // res.render('error');
   });
   

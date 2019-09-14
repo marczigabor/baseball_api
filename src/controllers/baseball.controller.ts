@@ -1,12 +1,7 @@
 import { Request, Response, NextFunction } from 'express-serve-static-core';
 import request from "request";
-import { parseString } from "xml2js";
 import { ScheduleMapper } from '../mappers/schedule.mapper';
 import { LineScoreMapper } from '../mappers/line.score.mapper';
-
-// const baseUri: string = "http://gd2.mlb.com/";
-// const gameUri: string = "components/game/mlb/";
-// const gameIdPrefix: string = "gid_";
 
 const baseUrl: string = "http://statsapi.mlb.com/api/v1/";
 
@@ -25,7 +20,6 @@ const baseball_controller = {
 
                 if (response.statusCode == 200){
 
-                    //console.log(result);
                     res.send(LineScoreMapper.mapLineScore(JSON.parse(body)));
                   
                 }else {
@@ -51,7 +45,6 @@ const baseball_controller = {
 
                 if (response.statusCode == 200){
 
-                    //console.log(result);
                     res.send(ScheduleMapper.mapSchedule(JSON.parse(body)));
                   
                 }else {
